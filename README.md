@@ -1,6 +1,6 @@
 # 🐟 Fish Detection Web App
 
-This is a simple web application that uses the Roboflow API to detect and identify fish species in real-time. It allows users to analyze fish data through live camera input and provides basic statistics based on detection results.
+This is a simple web application that uses the Roboflow API to detect and identify fish species in real-time. It allows users to analyze fish data through live camera input and provides basic information based on detection results.
 
 ## 🔧 Features
 

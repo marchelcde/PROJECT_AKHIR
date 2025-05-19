@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "inferencejs": "^1.0.21",
+    "roboflow": "^0.2.0"
+  }
+}

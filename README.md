@@ -16,4 +16,13 @@ This is a simple web application that uses the Roboflow API to detect and identi
 1. Clone the repository:
    ```bash
    git clone https://github.com/keefalasut/PCD-AKHIR.git
-   cd PCD-AKHIR
+   cd deteksi-ikan-vanker
+   ```
+2. Install Dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the Application:
+   ```bash
+   npm run dev
+   ```

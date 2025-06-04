@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanker Fish</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <title>VANKER JAYA</title>
+    <link rel="stylesheet" href="../src/style.css" />
   </head>
   <body>
     <header>
@@ -38,24 +38,41 @@
       </div>
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detection.html">Fish Detection</a></li>
           <li>
-            <a href="detection.html" class="active">Fish Detection</a>
-          </li>
-          <li>
-            <a href="../html/picture_detection.html">Picture Detection</a>
+            <a href="picture_detection.html" class="active"
+              >Picture Detection</a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
     <div class="container">
-      <h2 class="page-title">Fish Detection</h2>
+      <h2 class="page-title">Fish Image Detection</h2>
+
       <div class="detection-container">
         <div class="camera-container">
+          <label for="imageUpload" class="upload-btn">Choose Image</label>
+          <input
+            type="file"
+            id="imageUpload"
+            accept="image/*"
+            style="display: none"
+          />
           <div class="camera-placeholder">
-            <video id="camera" autoplay playsinline></video>
-            <canvas id="overlayCanvas"></canvas>
+            <img
+              id="uploadedImage"
+              src=""
+              alt="Uploaded Image"
+              style="
+                display: none;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+              "
+            />
           </div>
         </div>
 
@@ -78,6 +95,6 @@
       <p>&copy; VANKER Fish Detection Model. All rights reserved.</p>
     </footer>
 
-    <script src="../js/camera.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>

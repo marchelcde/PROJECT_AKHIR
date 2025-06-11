@@ -51,15 +51,54 @@
 
     <div class="container">
       <h2 class="page-title">Fish Detection</h2>
-
       <div class="detection-container">
         <div class="camera-container">
-          <div class="camera-placeholder" style="position: relative">
-            <video id="camera" autoplay playsinline></video>
-            <canvas
-              id="overlayCanvas"
-              style="position: absolute; top: 0; left: 0"
-            ></canvas>
+          <div class="camera-controls">
+            <button
+              id="stopCameraBtn"
+              class="btn control-btn"
+              style="display: none"
+            >
+              Stop Camera
+            </button>
+            <button id="startCameraBtn" class="btn control-btn">
+              Start Camera
+            </button>
+            <button id="screenshotBtn" class="btn control-btn" disabled>
+              Take Screenshot
+            </button>
+          </div>
+          <div class="camera-view-container">
+            <div id="cameraPlaceholder" class="camera-off-message">
+              <div style="text-align: center; color: #6c757d">
+                <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H18A1,1 0 0,1 19,15V18A1,1 0 0,1 18,19H15V22A1,1 0 0,1 14,23H10A1,1 0 0,1 9,22V19H6A1,1 0 0,1 5,18V15A1,1 0 0,1 6,14H9.29L9.56,13.73C8.59,12.59 8,11.11 8,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5A4.5,4.5 0 0,0 5,9.5A4.5,4.5 0 0,0 9.5,14A4.5,4.5 0 0,0 14,9.5A4.5,4.5 0 0,0 9.5,5Z"
+                  />
+                </svg>
+                <h3>Camera Ready</h3>
+                <p>Click "Start Camera" to begin fish detection</p>
+                <div
+                  id="loadingIndicator"
+                  style="display: none; margin-top: 20px"
+                >
+                  <div class="spinner"></div>
+                  <p style="margin-top: 10px">Loading camera and AI model...</p>
+                </div>
+              </div>
+            </div>
+            <video
+              id="camera"
+              autoplay
+              playsinline
+              style="display: none"
+            ></video>
+            <canvas id="overlayCanvas" style="display: none"></canvas>
           </div>
         </div>
 

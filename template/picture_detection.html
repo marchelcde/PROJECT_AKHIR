@@ -51,16 +51,24 @@
 
     <div class="container">
       <h2 class="page-title">Fish Image Detection</h2>
-
       <div class="detection-container">
         <div class="camera-container">
-          <label for="imageUpload" class="upload-btn">Choose Image</label>
-          <input
-            type="file"
-            id="imageUpload"
-            accept="image/*"
-            style="display: none"
-          />
+          <div class="upload-controls">
+            <label for="imageUpload" class="upload-btn">Choose Image</label>
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              style="display: none"
+            />
+            <button
+              id="downloadBtn"
+              class="btn control-btn"
+              style="display: none"
+            >
+              Download Result
+            </button>
+          </div>
           <div class="camera-placeholder">
             <img
               id="uploadedImage"
